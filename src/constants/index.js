@@ -63,38 +63,47 @@ const technologies = [
   {
     name: "HTML 5",
     icon: html,
+    link:"https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
   {
     name: "CSS 3",
     icon: css,
+    link:"https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
     name: "JavaScript",
     icon: javascript,
+    link:"https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
-    name: "TypeScript",
+    name: "Illustrator",
     icon: typescript,
+    link:"https://www.adobe.com/products/illustrator.html",
   },
   {
     name: "React JS",
     icon: reactjs,
+    link:"https://react.dev/",
   },
   {
-    name: "Redux Toolkit",
+    name: "AfterEffects",
     icon: redux,
+    link:"https://www.adobe.com/products/aftereffects.html",
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    link:"https://tailwindcss.com/",
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Git",
+    icon: git,
+    link:"https://git-scm.com/",
   },
   {
-    name: "MongoDB",
+    name: "Photoshop",
     icon: mongodb,
+    link:"https://www.adobe.com/products/photoshop.html",
   },
   // {
   //   name: "Three JS",

@@ -10,13 +10,17 @@ const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt 
       options={{
-              max: 45,
-              scale: 1,
-              speed: 450
-            }}
+            max: 45,
+            scale: 1,
+            speed: 450
+          }}
       className='xs:w-[250px] w-full'
     >
       <motion.div
+        // 🚨 FIX: Using whileInView and viewport for scroll-triggered animation
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
       >
@@ -28,25 +32,32 @@ const ServiceCard = ({ index, title, icon }) => {
         </div>
       </motion.div>
     </Tilt>
-
   )
 }
 
 const About = () => {
   return (
     <>
-      {
-      <motion.div variants={textVariant()} initial="hidden" animate="show">
+      {/* 🚨 FIX: Using whileInView and viewport for header animation */}
+      <motion.div 
+        variants={textVariant()} 
+        initial="hidden" 
+        whileInView="show"
+        viewport={{ once: true }}
+      >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
-      }
+      
+      {/* 🚨 FIX: Using whileInView and viewport for paragraph animation */}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I'm a Motivated and innovative engineering student with a unique blend of technical and creative skills. Experienced in front-end web development (HTML, CSS, Javascript) and proficient in graphic design software (Photoshop, Illustrator, React). Eager to contribute to a dynamic team and grow professionally in a tech-focused environment.
-
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
